@@ -1,0 +1,32 @@
+body {
+  background-color: aqua;
+  font-family: Georgia;
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  font-size: 60px;
+  color: darkblue;
+}
+
+h4 {
+  text-align: right;
+  font-style: italic;
+}
+
+.nama {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+}
+
+.p1 {
+  text-align: center;
+  color: orange;
+}
+
+.p2 {
+  text-align: right;
+}
