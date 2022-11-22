@@ -1,0 +1,206 @@
+/* Font */
+@font-face {
+  font-family: Spartan;
+  src: url(../fonts/LeagueSpartan-Bold.otf) format("opentype");
+}
+
+/* Css Utama */
+body {
+  background-color: blanchedalmond;
+}
+
+body h1 {
+  font-family: Spartan;
+  font-size: 50px;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 2px lightgray;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  margin: auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.container {
+  background-color: lightgray;
+  width: 1000px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px 5px white;
+}
+
+.container h5 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.player li {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  box-shadow: 0 0 10px 5px black, 0 0 10px 10px lightblue;
+  margin: 20px;
+}
+
+.player .top {
+  margin-left: 220px;
+}
+
+.player .bottom {
+  margin-left: 80px;
+}
+
+.player li span {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin-top: -240px;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  line-height: 230px;
+  transform: scale(0);
+  opacity: 0;
+  transition: 300ms, opacity 300ms 300ms;
+}
+
+.player li:hover span {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* overlay */
+.overlay {
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(240, 128, 128, 0);
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: 300ms;
+  padding: 50px;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(70, 140, 246, 0.8);
+  opacity: 1;
+}
+
+.overlay img {
+  max-height: 100%;
+}
+
+.overlay:target img {
+  animation: zoomAndFade 300ms;
+}
+
+.overlay .close {
+  position: absolute;
+  color: red;
+  text-decoration: none;
+  font-size: 30px;
+  top: 10px;
+  left: 50%;
+  margin-left: -23px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: rotateAndZoom 300ms 0.3s forwards;
+}
+
+.overlay .next {
+  position: absolute;
+  margin: 25% 2%;
+}
+
+.overlay .prev {
+  position: absolute;
+  margin: 25% -5%;
+}
+
+.overlay:target .next {
+  animation: slideinoutRight 600ms;
+}
+
+.overlay:target .prev {
+  animation: slideinoutLeft 600ms;
+}
+
+.clear {
+  clear: both;
+}
+
+/* animasi */
+@keyframes zoomAndFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateAndZoom {
+  0% {
+    transform: rotate(0) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideinoutRight {
+  0% {
+    margin-left: -30px;
+    opacity: 0;
+  }
+  50% {
+    margin-left: 80px;
+  }
+  100% {
+    margin-left: 2%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideinoutLeft {
+  0% {
+    margin-left: 50px;
+    opacity: 0;
+  }
+  50% {
+    margin-left: -100px;
+  }
+  100% {
+    margin-left: -5%;
+    opacity: 1;
+  }
+}

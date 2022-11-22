@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern CSS</title>
+    <style>
+      .kotak1 {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(250, 128, 114, 0.5);
+        margin: auto;
+        margin-top: -100px;
+        border-radius: 55px;
+        border-top-left-radius: 0;
+        opacity: 1;
+        position: relative;
+        z-index: 10;
+      }
+
+      p {
+        position: relative;
+      }
+
+      .kotak2 {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(173, 216, 230, 0.8);
+        margin: auto;
+        margin-top: 100px;
+        /* box-shadow: [inset] <x-offset> <y-offset> <blur> [size] <color>; */
+        box-shadow: 10px 15px 10px 5px rgba(255, 0, 0, 0.2),
+          -15px -20px 10px 5px rgba(254, 0, 80, 0.2),
+          20px -15px 10px 5px rgba(255, 165, 0, 0.8);
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+        font-family: Arial;
+        font-size: 100px;
+        text-shadow: 5px 5px 5px red, 10px 2px 2px blueviolet;
+      }
+
+      .kotak3 {
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+        margin: auto;
+        font-size: 100px;
+        text-align: center;
+        line-height: 200%;
+        transition: 2s 1s;
+      }
+
+      .kotak3:hover {
+        transform: rotate(45deg);
+        border-radius: 50%;
+        background-color: black;
+        color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptate
+      dolorum repellat consequuntur accusamus alias molestiae sequi. At rerum
+      quibusdam autem modi quis dolorum odio quo accusantium? Ullam vitae
+      consectetur quas! Quibusdam rem tenetur aliquam vero, blanditiis labore
+      ipsa accusantium in accusamus incidunt neque non quisquam, debitis
+      aspernatur hic. Odio!
+    </p>
+
+    <div class="kotak1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+      ratione.
+    </div>
+
+    <div class="kotak2"></div>
+
+    <h1>Narapati Keysa Anandi</h1>
+
+    <div class="kotak3">1</div>
+  </body>
+</html>
